@@ -92,7 +92,7 @@ public class LabelScript : MonoBehaviour {
     {
         string filepath = GetPath() + "/Label_" + String.Format("{0:000}", subjectID) + DateTime.Now.ToString("_yyyyMMdd_HHmmss") + ".csv";
         StreamWriter file = new StreamWriter(filepath, true);
-        file.WriteLine("label, localTime, judgedNum");
+        file.WriteLine("label, time, localTime");
         for (int i = 0; i < labelList.Count; i++)
         {
             file.Write(labelList[i] + ",");
